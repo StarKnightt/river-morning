@@ -15,9 +15,8 @@ and the trout under the surface.
 It needs a browser with WebGPU, a keyboard and a mouse; Chrome or Edge is recommended. It was built in Chrome on
 Windows and measured on an RTX 4060 at 1920x1080. The graphics setting starts on Auto, which picks a quality preset
 for your GPU and screen size, and on integrated graphics the loading screen suggests switching the browser to the
-high-performance GPU. **The first visit downloads about 94 MB before it can start**, which took about a minute on the
-connection it was tested on (about 136 MB in all once the other three skies and the sounds have loaded in the
-background). Once the files are in, the test PC needed about 12 seconds to decode them and compile the shaders. The
+high-performance GPU. **The first visit downloads about 91 MB before it can start**, which took about 43 seconds over
+a 25 Mbit/s line (about 120 MB in all once the other three skies and the sounds have loaded in the background). Once the files are in, the test PC needed about 12 seconds to decode them and compile the shaders. The
 browser keeps the files, so later visits skip the download: a second visit was playable in about 14 seconds.
 
 ## Running it locally
@@ -219,12 +218,13 @@ the 95th percentile, and reached about 15 ms with a video playing on the same GP
 frame, but with little to spare. Above 100 fps the shadow and reflection refreshes are spaced out, and walking,
 fishing and the trout behave the same at 60, 144 and 240 Hz.
 
-A first visit to the live site downloads about 94 MB before the game can start (118 MB of files; GitHub Pages
-compresses most of them on the way): the morning sky, the terrain textures, the trees, rocks and camp models, the
-angler and 0.6 MB of code. The largest downloads are the four sky backgrounds (6.6 to 11.4 MB each), the cabin
-(6.1 MB) and the angler (4.5 MB). The other three skies (34 MB) and the 63 sounds (9 MB) follow in the background,
-about 136 MB in all. On the connection it was tested on, the first visit was playable after about a minute; from a
-local copy of the build, with no download time, it took 13 seconds, nearly all of it decoding and shader compilation.
+A first visit downloads about 91 MB before the game can start (107 MB of files; GitHub Pages compresses most of
+them on the way): the terrain textures (29 MB), the trees (16 MB), the rocks, logs and ferns (17 MB), the camp
+(16 MB), the morning sky (5 MB), the angler (4.5 MB) and 0.6 MB of code. The skies ship losslessly packed (the same
+RGBE texels as the prepared .hdr files, as delta-coded planes, gzipped: 45% smaller on the wire). The other three
+skies (22 MB) and the 63 sounds (9 MB) follow in the background, about 120 MB in all. From a local copy of the build
+over a 25 Mbit/s line (the browser's network throttling, a fresh profile), the first visit was playable after about
+43 seconds; with no download time it takes 13 seconds, nearly all of it decoding and shader compilation.
 
 ## Project structure
 
@@ -256,7 +256,7 @@ The scripts run with `pnpm tsx scripts/<name>.ts`. The browser checks drive the 
 release and a snapped line), `todcheck`, `rodcheck`, `cabincheck`, `robustcheck` (big screens, the governor, GPU
 errors) and `qualitycheck`. `pnpm shots` takes screenshots and timings at the fixed camera spots. `fish-sim`,
 `fishfight` and `govsim` run headless with no browser or GPU. `pnpm assets:polyhaven` downloads the Poly Haven source
-files again into `raw/`, which git ignores. The checks were written for the author's PC: they write under
+files again into `raw/`, which git ignores, and `pack-sky` packs the prepared skies for shipping. The checks were written for the author's PC: they write under
 `E:\shots\river-morning\` unless told otherwise.
 
 ## Limitations
@@ -280,7 +280,9 @@ files again into `raw/`, which git ignores. The checks were written for the auth
   boards or a wall.
 - **At very high refresh rates** the fishing line and float update at a fixed 120 Hz without interpolation, so at
   144 to 240 Hz they move very slightly unevenly.
-- **The first visit is a large download**, about 94 MB before the game starts.
+- **The first visit is a large download**, about 91 MB before the game starts. Nearly all of it is already
+  compressed (WebP textures, meshopt geometry for everything but the trees); making it much smaller would mean
+  smaller or lossier textures.
 
 ## How it was built
 

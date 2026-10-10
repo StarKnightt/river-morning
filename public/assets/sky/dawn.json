@@ -30,9 +30,9 @@
   ],
   "skyIrradianceH": 3.4104,
   "envClamp": 24.0,
-  "env": "sky/dawn_env.hdr",
+  "env": "sky/dawn_env.rgbe.gz",
   "bg": {
-    "file": "sky/dawn_bg.hdr",
+    "file": "sky/dawn_bg.rgbe.gz",
     "width": 4096,
     "height": 1152,
     "vMin": 0.4375,

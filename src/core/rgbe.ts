@@ -1,7 +1,10 @@
 /**
  * Radiance RGBE (.hdr) decoding to half-float RGBA, the same texels three's HDRLoader makes (value =
  * mantissa * 2^(e - 128) / 255, alpha 1). Shared by the sky decode worker and its main-thread fallback.
- * Reads new-style RLE and flat scanlines (Poly Haven and OpenCV write RLE, the old prep tool wrote flat).
+ * Reads new-style RLE and flat scanlines (Poly Haven and OpenCV write RLE, the old prep tool wrote flat), and the
+ * packed skies the game ships (`.rgbe.gz`, scripts/pack-sky.ts): the same RGBE bytes as the .hdr, stored as four
+ * planes (R, G, B, E) of rows, each byte the difference from its left neighbour, gzipped. That is lossless and
+ * about 45% smaller on the wire than the RLE file gzipped by the server.
  */
 export interface DecodedHDR {
   width: number;
@@ -24,8 +27,75 @@ function toHalf(v: number): number {
   return ((e - 112) << 10) | ((x >>> 13) & 0x3ff);
 }
 
-export function decodeRGBE(buf: ArrayBuffer): DecodedHDR {
+/** raw RGBE bytes (4 per texel, rows top first) */
+export interface RawRGBE {
+  width: number;
+  height: number;
+  rgbe: Uint8Array;
+}
+
+/** "RGBD": the header of a packed sky after gunzip, then u32 width, u32 height (little endian) and the planes */
+const PACKED_MAGIC = 0x44424752;
+
+export function packRGBE(raw: RawRGBE): Uint8Array {
+  const { width: w, height: h, rgbe } = raw;
+  const out = new Uint8Array(12 + w * h * 4);
+  const dv = new DataView(out.buffer);
+  dv.setUint32(0, PACKED_MAGIC, true);
+  dv.setUint32(4, w, true);
+  dv.setUint32(8, h, true);
+  let o = 12;
+  for (let c = 0; c < 4; c++) {
+    for (let y = 0; y < h; y++) {
+      let prev = 0;
+      for (let x = 0, j = y * w * 4 + c; x < w; x++, j += 4) {
+        out[o++] = (rgbe[j] - prev) & 0xff;
+        prev = rgbe[j];
+      }
+    }
+  }
+  return out;
+}
+
+function unpackRGBE(bytes: Uint8Array): RawRGBE {
+  const dv = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  const w = dv.getUint32(4, true), h = dv.getUint32(8, true);
+  if (bytes.length !== 12 + w * h * 4) throw new Error('rgbe: packed sky has the wrong size');
+  const rgbe = new Uint8Array(w * h * 4);
+  let o = 12;
+  for (let c = 0; c < 4; c++) {
+    for (let y = 0; y < h; y++) {
+      let v = 0;
+      for (let x = 0, j = y * w * 4 + c; x < w; x++, j += 4) {
+        v = (v + bytes[o++]) & 0xff;
+        rgbe[j] = v;
+      }
+    }
+  }
+  return { width: w, height: h, rgbe };
+}
+
+/** a Radiance .hdr or an (already gunzipped) packed sky, as raw RGBE bytes */
+export function readRGBE(buf: ArrayBuffer): RawRGBE {
   const bytes = new Uint8Array(buf);
+  if (bytes.length >= 12 && new DataView(buf).getUint32(0, true) === PACKED_MAGIC) return unpackRGBE(bytes);
+  return readRadiance(bytes);
+}
+
+/** fetch a sky file (.hdr or .rgbe.gz) and decode it to half floats */
+export async function fetchSky(url: string): Promise<DecodedHDR> {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${r.status} ${url}`);
+  let buf = await r.arrayBuffer();
+  // GitHub Pages sends a .gz as it is; Vite's dev server sends it with Content-Encoding: gzip, already unzipped
+  const head = new Uint8Array(buf, 0, Math.min(2, buf.byteLength));
+  if (head[0] === 0x1f && head[1] === 0x8b) {
+    buf = await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+  }
+  return decodeRGBE(buf);
+}
+
+function readRadiance(bytes: Uint8Array): RawRGBE {
   let pos = 0;
   const line = () => {
     let s = '';
@@ -73,6 +143,11 @@ export function decodeRGBE(buf: ArrayBuffer): DecodedHDR {
       pos += w * 4;
     }
   }
+  return { width: w, height: h, rgbe };
+}
+
+export function decodeRGBE(buf: ArrayBuffer): DecodedHDR {
+  const { width: w, height: h, rgbe } = readRGBE(buf);
   const scale = new Float32Array(256);
   for (let e = 1; e < 256; e++) scale[e] = 2 ** (e - 128) / 255;
   const n = w * h;

@@ -30,14 +30,14 @@
   ],
   "skyIrradianceH": 2.0171,
   "envClamp": 24.0,
-  "env": "sky/night_env.hdr",
+  "env": "sky/night_env.rgbe.gz",
   "brightestPoint": {
     "lum": 554.81,
     "row": 451,
     "col": 2285
   },
   "bg": {
-    "file": "sky/night_bg.hdr",
+    "file": "sky/night_bg.rgbe.gz",
     "width": 4096,
     "height": 1152,
     "vMin": 0.4375,

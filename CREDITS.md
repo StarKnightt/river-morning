@@ -29,7 +29,7 @@ Optional, no attribution required (public domain):
 
 | Asset | Author(s) | Licence | Source | Used for |
 |---|---|---|---|---|
-| Qwantani Morning (Pure Sky) | Jarod Guest | CC0 1.0 | [qwantani_morning_puresky](https://polyhaven.com/a/qwantani_morning_puresky) | morning sky and image-based light (`sky/morning_bg.hdr`, `sky/morning_env.hdr`, prepared from the original 4k file, which is not shipped) |
+| Qwantani Morning (Pure Sky) | Jarod Guest | CC0 1.0 | [qwantani_morning_puresky](https://polyhaven.com/a/qwantani_morning_puresky) | morning sky and image-based light (`sky/morning_bg.rgbe.gz`, `sky/morning_env.rgbe.gz`, prepared from the original 4k file, which is not shipped) |
 | Qwantani Dawn (Pure Sky) | Greg Zaal (photography), Jarod Guest (processing) | CC0 1.0 | [qwantani_dawn_puresky](https://polyhaven.com/a/qwantani_dawn_puresky) | dawn sky and image-based light (`sky/dawn_*`) |
 | Qwantani Sunset (Pure Sky) | Greg Zaal (photography), Jarod Guest (processing) | CC0 1.0 | [qwantani_sunset_puresky](https://polyhaven.com/a/qwantani_sunset_puresky) | golden-hour sky and image-based light (`sky/golden_*`) |
 | Qwantani Night (Pure Sky) | Greg Zaal (photography), Jarod Guest (processing) | CC0 1.0 | [qwantani_night_puresky](https://polyhaven.com/a/qwantani_night_puresky) | night sky with the Milky Way and image-based light (`sky/night_*`); the moon and the stars are drawn by the game |
@@ -37,18 +37,13 @@ Optional, no attribution required (public domain):
 | Ganges River Pebbles | Amal Kumar | CC0 1.0 | [ganges_river_pebbles](https://polyhaven.com/a/ganges_river_pebbles) | pebble bar and shallow bed |
 | Gravelly Sand | Dario Barresi | CC0 1.0 | [gravelly_sand](https://polyhaven.com/a/gravelly_sand) | sand in the deep pool |
 | Dry River Pebbles | Amal Kumar | CC0 1.0 | [dry_river_pebbles](https://polyhaven.com/a/dry_river_pebbles) | dry pebble bank above the waterline |
-| Forest Ground 04 | Rob Tuytel, Rico Cilliers | CC0 1.0 | [forest_ground_04](https://polyhaven.com/a/forest_ground_04) | forest floor up the bank |
-| Brown Mud Leaves 01 | Rob Tuytel | CC0 1.0 | [brown_mud_leaves_01](https://polyhaven.com/a/brown_mud_leaves_01) | muddy needles near the cabin path |
 | Rocky Terrain 02 | Amal Kumar | CC0 1.0 | [rocky_terrain_02](https://polyhaven.com/a/rocky_terrain_02) | steep rocky slopes |
 | Snow 02 | Rob Tuytel | CC0 1.0 | [snow_02](https://polyhaven.com/a/snow_02) | snow on the distant peaks |
 | Aerial Rocks 02 | Rob Tuytel | CC0 1.0 | [aerial_rocks_02](https://polyhaven.com/a/aerial_rocks_02) | distant mountain rock |
 | Forest Ground 01 | Rob Tuytel | CC0 1.0 | [forrest_ground_01](https://polyhaven.com/a/forrest_ground_01) | grassy bank with twigs and litter |
 | Forest Ground 03 | Rob Tuytel | CC0 1.0 | [forrest_ground_03](https://polyhaven.com/a/forrest_ground_03) | pine-needle forest floor |
 | Lichen Rock | Rico Cilliers | CC0 1.0 | [lichen_rock](https://polyhaven.com/a/lichen_rock) | rock faces of the steep north bank |
-| Mossy Rock | Rob Tuytel | CC0 1.0 | [mossy_rock](https://polyhaven.com/a/mossy_rock) | mossy rock faces and boulders |
-| Rocky Trail | Amal Kumar | CC0 1.0 | [rocky_trail](https://polyhaven.com/a/rocky_trail) | path from the bank to the cabin |
 | Brown Mud Rocks 01 | Rob Tuytel | CC0 1.0 | [brown_mud_rocks_01](https://polyhaven.com/a/brown_mud_rocks_01) | muddy gravel between the bar and the grass |
-| Forest Leaves 02 | Rob Tuytel | CC0 1.0 | [forest_leaves_02](https://polyhaven.com/a/forest_leaves_02) | mossy litter in the shade |
 | Fir Tree 01 (twig and bark maps) | Rob Tuytel (photography), Rico Cilliers (modelling) | CC0 1.0 | [fir_tree_01](https://polyhaven.com/a/fir_tree_01) | spruce and fir needle sprigs (needle-card atlas) and fir bark (`trees/textures/`) |
 | Pine Tree 01 (twig and bark maps) | Rob Tuytel (photography), Rico Cilliers (modelling) | CC0 1.0 | [pine_tree_01](https://polyhaven.com/a/pine_tree_01) | pine twigs (needle-card atlas) and pine bark (`trees/textures/`) |
 | Rough Wood | Rob Tuytel | CC0 1.0 | [rough_wood](https://polyhaven.com/a/rough_wood) | cabin logs and roof shakes, dock frame and posts, split firewood, woodpile (all four camp models) |

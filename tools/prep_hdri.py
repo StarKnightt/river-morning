@@ -1,4 +1,6 @@
-"""Prepare a Poly Haven equirect .hdr for the game (one sky per time of day).
+"""Prepare a Poly Haven equirect .hdr for the game (one sky per time of day). The game ships the result packed:
+run `pnpm tsx scripts/pack-sky.ts` afterwards (lossless .rgbe.gz next to the json, which it repoints), then move
+the .hdr files out of public/.
 
 Outputs (next to public/assets/sky/ by default, or in --out):
   <name>_env.hdr   2k copy with the sun disc clamped out (image based light without the sun,

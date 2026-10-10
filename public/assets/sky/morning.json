@@ -30,9 +30,9 @@
   ],
   "skyIrradianceH": 1.1251,
   "envClamp": 24.0,
-  "env": "sky/morning_env.hdr",
+  "env": "sky/morning_env.rgbe.gz",
   "bg": {
-    "file": "sky/morning_bg.hdr",
+    "file": "sky/morning_bg.rgbe.gz",
     "width": 4096,
     "height": 1152,
     "vMin": 0.4375,

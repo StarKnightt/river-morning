@@ -1,7 +1,7 @@
 import * as THREE from 'three/webgpu';
 import type { Assets, SkyMeta } from '../core/Assets';
 import type { TimeOfDay } from '../core/params';
-import { decodeRGBE, type DecodedHDR } from '../core/rgbe';
+import { fetchSky, type DecodedHDR } from '../core/rgbe';
 
 /** What tools/prep_hdri.py writes next to each sky (sky/<tod>.json); the morning file of part 1 lacks the extras. */
 export interface SkyMetaTod extends SkyMeta {
@@ -30,10 +30,10 @@ export interface SkyAsset {
 
 /** The skies of part 1 (morning), used when a json has no prepared background or environment file. */
 const FALLBACK: Record<TimeOfDay, { bg: string; env: string }> = {
-  dawn: { bg: 'hdri/qwantani_dawn_puresky_4k.hdr', env: 'sky/dawn_env.hdr' },
-  morning: { bg: 'hdri/qwantani_morning_puresky_4k.hdr', env: 'sky/morning_env.hdr' },
-  golden: { bg: 'hdri/qwantani_sunset_puresky_4k.hdr', env: 'sky/golden_env.hdr' },
-  night: { bg: 'hdri/qwantani_night_puresky_4k.hdr', env: 'sky/night_env.hdr' },
+  dawn: { bg: 'hdri/qwantani_dawn_puresky_4k.hdr', env: 'sky/dawn_env.rgbe.gz' },
+  morning: { bg: 'hdri/qwantani_morning_puresky_4k.hdr', env: 'sky/morning_env.rgbe.gz' },
+  golden: { bg: 'hdri/qwantani_sunset_puresky_4k.hdr', env: 'sky/golden_env.rgbe.gz' },
+  night: { bg: 'hdri/qwantani_night_puresky_4k.hdr', env: 'sky/night_env.rgbe.gz' },
 };
 
 interface Pending {
@@ -42,7 +42,7 @@ interface Pending {
 }
 
 /**
- * Loads the four skies on demand: the json on the main thread, the .hdr files decoded to half floats in a
+ * Loads the four skies on demand: the json on the main thread, the sky files decoded to half floats in a
  * worker, uploaded to the GPU at once (renderer.initTexture) and the CPU copy dropped (three only uploads
  * again when a texture's version changes, which these never do). Each sky is ~55 MB of VRAM (bg 4096x1152
  * + env 2048x1024, RGBA16F). Without workers it decodes on the main thread (a hitch of a few hundred ms).
@@ -125,10 +125,8 @@ export class SkyLibrary {
     return this.decodeHere(url);
   }
 
-  private async decodeHere(url: string): Promise<DecodedHDR> {
-    const r = await fetch(url);
-    if (!r.ok) throw new Error(`${r.status} ${url}`);
-    return decodeRGBE(await r.arrayBuffer());
+  private decodeHere(url: string): Promise<DecodedHDR> {
+    return fetchSky(url);
   }
 
   /** the same texture HDRLoader + Assets.hdri() make, uploaded now */

@@ -30,9 +30,9 @@
   ],
   "skyIrradianceH": 2.3218,
   "envClamp": 24.0,
-  "env": "sky/golden_env.hdr",
+  "env": "sky/golden_env.rgbe.gz",
   "bg": {
-    "file": "sky/golden_bg.hdr",
+    "file": "sky/golden_bg.rgbe.gz",
     "width": 4096,
     "height": 1152,
     "vMin": 0.4375,

@@ -37,8 +37,6 @@ export const ASSETS: AssetReq[] = [
   { id: 'ganges_river_pebbles', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'pebble bar / shallow bed' },
   { id: 'gravelly_sand', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'sand in the deep pool' },
   { id: 'dry_river_pebbles', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'dry pebble bank above the waterline' },
-  { id: 'forest_ground_04', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'forest floor up the bank' },
-  { id: 'brown_mud_leaves_01', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'muddy needles near the cabin path' },
   { id: 'rocky_terrain_02', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'steep rocky slopes' },
   { id: 'snow_02', kind: 'texture', res: '1k', maps: TEX_MAPS, note: 'snow on distant peaks' },
   { id: 'aerial_rocks_02', kind: 'texture', res: '1k', maps: TEX_MAPS, note: 'distant mountain rock' },
@@ -46,10 +44,7 @@ export const ASSETS: AssetReq[] = [
   { id: 'forrest_ground_01', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'grassy bank with twigs and litter' },
   { id: 'forrest_ground_03', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'pine needle forest floor' },
   { id: 'lichen_rock', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'steep north bank rock faces' },
-  { id: 'mossy_rock', kind: 'texture', res: '2k', maps: TEX_MAPS, note: 'mossy rock faces and boulders' },
-  { id: 'rocky_trail', kind: 'texture', res: '1k', maps: TEX_MAPS, note: 'path from the bank to the cabin' },
   { id: 'brown_mud_rocks_01', kind: 'texture', res: '1k', maps: TEX_MAPS, note: 'muddy gravel between bar and grass' },
-  { id: 'forest_leaves_02', kind: 'texture', res: '1k', maps: TEX_MAPS, note: 'mossy litter in shade' },
 ];
 
 async function getJson(url: string): Promise<any> {
