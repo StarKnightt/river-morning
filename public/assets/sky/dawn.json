@@ -1,0 +1,48 @@
+{
+  "source": "qwantani_dawn_puresky_4k.hdr",
+  "sunDir": [
+    0.81001,
+    0.0,
+    0.58642
+  ],
+  "sunElevationDeg": 0.0,
+  "sunPhiDeg": 35.903,
+  "sunVisible": false,
+  "sunColor": [
+    1.0,
+    0.8027,
+    0.5884
+  ],
+  "sunIrradiance": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "horizonColor": [
+    1.682,
+    1.3656,
+    1.2513
+  ],
+  "zenithColor": [
+    0.3404,
+    0.4629,
+    0.7291
+  ],
+  "skyIrradianceH": 3.4104,
+  "envClamp": 24.0,
+  "env": "sky/dawn_env.hdr",
+  "bg": {
+    "file": "sky/dawn_bg.hdr",
+    "width": 4096,
+    "height": 1152,
+    "vMin": 0.4375,
+    "elevationMinDeg": -11.25
+  },
+  "rotationYDeg": 80.903,
+  "sunBearingDeg": 45.0,
+  "sunDirWorld": [
+    0.70711,
+    0.0,
+    -0.70711
+  ]
+}

@@ -1,0 +1,30 @@
+/* Time of day: no buttons; after T the new time's name shows small and faint at the top for ~1.5 s, then fades. */
+.tod-label {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(239, 230, 210, 0.62);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.tod-label.is-on {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tod-label,
+  .tod-label.is-on {
+    transition: none;
+  }
+}

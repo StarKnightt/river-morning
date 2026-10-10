@@ -1,0 +1,48 @@
+{
+  "source": "qwantani_sunset_puresky_4k.hdr",
+  "sunDir": [
+    0.80422,
+    0.10605,
+    0.5848
+  ],
+  "sunElevationDeg": 6.09,
+  "sunPhiDeg": 36.023,
+  "sunVisible": true,
+  "sunColor": [
+    1.0,
+    0.3438,
+    0.0231
+  ],
+  "sunIrradiance": [
+    6.867,
+    2.361,
+    0.159
+  ],
+  "horizonColor": [
+    2.6308,
+    1.905,
+    1.2476
+  ],
+  "zenithColor": [
+    0.2137,
+    0.3488,
+    0.6038
+  ],
+  "skyIrradianceH": 2.3218,
+  "envClamp": 24.0,
+  "env": "sky/golden_env.hdr",
+  "bg": {
+    "file": "sky/golden_bg.hdr",
+    "width": 4096,
+    "height": 1152,
+    "vMin": 0.4375,
+    "elevationMinDeg": -11.25
+  },
+  "rotationYDeg": -165.977,
+  "sunBearingDeg": 292.0,
+  "sunDirWorld": [
+    -0.92196,
+    0.10605,
+    -0.37249
+  ]
+}

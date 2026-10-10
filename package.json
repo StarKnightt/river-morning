@@ -1,0 +1,27 @@
+{
+  "name": "river-morning",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.18.3",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "typecheck": "tsc --noEmit",
+    "shots": "tsx scripts/shots.ts",
+    "assets:polyhaven": "tsx scripts/fetch-polyhaven.ts"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/three": "0.186.0",
+    "@webgpu/types": "^0.1.74",
+    "playwright-core": "^1.64.0",
+    "tsx": "^4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "qwantani_morning_puresky": {
+    "id": "qwantani_morning_puresky",
+    "kind": "hdri",
+    "name": "Qwantani Morning (Pure Sky)",
+    "authors": [
+      "Jarod Guest"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/qwantani_morning_puresky",
+    "files": [
+      "hdri/qwantani_morning_puresky_4k.hdr"
+    ],
+    "note": "morning sky + image based light"
+  },
+  "qwantani_dawn_puresky": {
+    "id": "qwantani_dawn_puresky",
+    "kind": "hdri",
+    "name": "Qwantani Dawn (Pure Sky)",
+    "authors": [
+      "Greg Zaal",
+      "Jarod Guest"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/qwantani_dawn_puresky",
+    "files": [
+      "sky/dawn_bg.hdr",
+      "sky/dawn_env.hdr"
+    ],
+    "note": "dawn sky + image based light (part 8)"
+  },
+  "qwantani_sunset_puresky": {
+    "id": "qwantani_sunset_puresky",
+    "kind": "hdri",
+    "name": "Qwantani Sunset (Pure Sky)",
+    "authors": [
+      "Greg Zaal",
+      "Jarod Guest"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/qwantani_sunset_puresky",
+    "files": [
+      "sky/golden_bg.hdr",
+      "sky/golden_env.hdr"
+    ],
+    "note": "golden hour sky + image based light (part 8)"
+  },
+  "qwantani_night_puresky": {
+    "id": "qwantani_night_puresky",
+    "kind": "hdri",
+    "name": "Qwantani Night (Pure Sky)",
+    "authors": [
+      "Greg Zaal",
+      "Jarod Guest"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/qwantani_night_puresky",
+    "files": [
+      "sky/night_bg.hdr",
+      "sky/night_env.hdr"
+    ],
+    "note": "night sky + image based light (part 8)"
+  },
+  "river_small_rocks": {
+    "id": "river_small_rocks",
+    "kind": "texture",
+    "name": "River Small Rocks",
+    "authors": [
+      "Rob Tuytel",
+      "Rico Cilliers"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/river_small_rocks",
+    "files": [
+      "textures/river_small_rocks/river_small_rocks_diffuse_2k.jpg",
+      "textures/river_small_rocks/river_small_rocks_nor_gl_2k.jpg",
+      "textures/river_small_rocks/river_small_rocks_arm_2k.jpg",
+      "textures/river_small_rocks/river_small_rocks_displacement_2k.jpg"
+    ],
+    "note": "river bed pebbles"
+  },
+  "ganges_river_pebbles": {
+    "id": "ganges_river_pebbles",
+    "kind": "texture",
+    "name": "Ganges River Pebbles",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/ganges_river_pebbles",
+    "files": [
+      "textures/ganges_river_pebbles/ganges_river_pebbles_diffuse_2k.jpg",
+      "textures/ganges_river_pebbles/ganges_river_pebbles_nor_gl_2k.jpg",
+      "textures/ganges_river_pebbles/ganges_river_pebbles_arm_2k.jpg",
+      "textures/ganges_river_pebbles/ganges_river_pebbles_displacement_2k.jpg"
+    ],
+    "note": "pebble bar / shallow bed"
+  },
+  "gravelly_sand": {
+    "id": "gravelly_sand",
+    "kind": "texture",
+    "name": "Gravelly Sand",
+    "authors": [
+      "Dario Barresi"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/gravelly_sand",
+    "files": [
+      "textures/gravelly_sand/gravelly_sand_diffuse_2k.jpg",
+      "textures/gravelly_sand/gravelly_sand_nor_gl_2k.jpg",
+      "textures/gravelly_sand/gravelly_sand_arm_2k.jpg",
+      "textures/gravelly_sand/gravelly_sand_displacement_2k.jpg"
+    ],
+    "note": "sand in the deep pool"
+  },
+  "dry_river_pebbles": {
+    "id": "dry_river_pebbles",
+    "kind": "texture",
+    "name": "Dry River Pebbles",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/dry_river_pebbles",
+    "files": [
+      "textures/dry_river_pebbles/dry_river_pebbles_diffuse_2k.jpg",
+      "textures/dry_river_pebbles/dry_river_pebbles_nor_gl_2k.jpg",
+      "textures/dry_river_pebbles/dry_river_pebbles_arm_2k.jpg",
+      "textures/dry_river_pebbles/dry_river_pebbles_displacement_2k.jpg"
+    ],
+    "note": "dry pebble bank above the waterline"
+  },
+  "forest_ground_04": {
+    "id": "forest_ground_04",
+    "kind": "texture",
+    "name": "Forest Ground 04",
+    "authors": [
+      "Rob Tuytel",
+      "Rico Cilliers"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/forest_ground_04",
+    "files": [
+      "textures/forest_ground_04/forest_ground_04_diffuse_2k.jpg",
+      "textures/forest_ground_04/forest_ground_04_nor_gl_2k.jpg",
+      "textures/forest_ground_04/forest_ground_04_arm_2k.jpg",
+      "textures/forest_ground_04/forest_ground_04_displacement_2k.jpg"
+    ],
+    "note": "forest floor up the bank"
+  },
+  "brown_mud_leaves_01": {
+    "id": "brown_mud_leaves_01",
+    "kind": "texture",
+    "name": "Brown Mud Leaves 01",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/brown_mud_leaves_01",
+    "files": [
+      "textures/brown_mud_leaves_01/brown_mud_leaves_01_diffuse_2k.jpg",
+      "textures/brown_mud_leaves_01/brown_mud_leaves_01_nor_gl_2k.jpg",
+      "textures/brown_mud_leaves_01/brown_mud_leaves_01_arm_2k.jpg",
+      "textures/brown_mud_leaves_01/brown_mud_leaves_01_displacement_2k.jpg"
+    ],
+    "note": "muddy needles near the cabin path"
+  },
+  "rocky_terrain_02": {
+    "id": "rocky_terrain_02",
+    "kind": "texture",
+    "name": "Rocky Terrain 02",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/rocky_terrain_02",
+    "files": [
+      "textures/rocky_terrain_02/rocky_terrain_02_diffuse_2k.jpg",
+      "textures/rocky_terrain_02/rocky_terrain_02_nor_gl_2k.jpg",
+      "textures/rocky_terrain_02/rocky_terrain_02_arm_2k.jpg",
+      "textures/rocky_terrain_02/rocky_terrain_02_displacement_2k.jpg"
+    ],
+    "note": "steep rocky slopes"
+  },
+  "snow_02": {
+    "id": "snow_02",
+    "kind": "texture",
+    "name": "Snow 02",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/snow_02",
+    "files": [
+      "textures/snow_02/snow_02_diffuse_1k.jpg",
+      "textures/snow_02/snow_02_nor_gl_1k.jpg",
+      "textures/snow_02/snow_02_arm_1k.jpg",
+      "textures/snow_02/snow_02_displacement_1k.jpg"
+    ],
+    "note": "snow on distant peaks"
+  },
+  "aerial_rocks_02": {
+    "id": "aerial_rocks_02",
+    "kind": "texture",
+    "name": "Aerial Rocks 02",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/aerial_rocks_02",
+    "files": [
+      "textures/aerial_rocks_02/aerial_rocks_02_diffuse_1k.jpg",
+      "textures/aerial_rocks_02/aerial_rocks_02_nor_gl_1k.jpg",
+      "textures/aerial_rocks_02/aerial_rocks_02_arm_1k.jpg",
+      "textures/aerial_rocks_02/aerial_rocks_02_displacement_1k.jpg"
+    ],
+    "note": "distant mountain rock"
+  },
+  "forrest_ground_01": {
+    "id": "forrest_ground_01",
+    "kind": "texture",
+    "name": "Forest Ground 01",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/forrest_ground_01",
+    "files": [
+      "textures/forrest_ground_01/forrest_ground_01_diffuse_2k.jpg",
+      "textures/forrest_ground_01/forrest_ground_01_nor_gl_2k.jpg",
+      "textures/forrest_ground_01/forrest_ground_01_arm_2k.jpg",
+      "textures/forrest_ground_01/forrest_ground_01_displacement_2k.jpg"
+    ],
+    "note": "grassy bank with twigs and litter"
+  },
+  "forrest_ground_03": {
+    "id": "forrest_ground_03",
+    "kind": "texture",
+    "name": "Forest Ground 03",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/forrest_ground_03",
+    "files": [
+      "textures/forrest_ground_03/forrest_ground_03_diffuse_2k.jpg",
+      "textures/forrest_ground_03/forrest_ground_03_nor_gl_2k.jpg",
+      "textures/forrest_ground_03/forrest_ground_03_arm_2k.jpg",
+      "textures/forrest_ground_03/forrest_ground_03_displacement_2k.jpg"
+    ],
+    "note": "pine needle forest floor"
+  },
+  "lichen_rock": {
+    "id": "lichen_rock",
+    "kind": "texture",
+    "name": "Lichen Rock",
+    "authors": [
+      "Rico Cilliers"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/lichen_rock",
+    "files": [
+      "textures/lichen_rock/lichen_rock_diffuse_2k.jpg",
+      "textures/lichen_rock/lichen_rock_nor_gl_2k.jpg",
+      "textures/lichen_rock/lichen_rock_arm_2k.jpg",
+      "textures/lichen_rock/lichen_rock_displacement_2k.jpg"
+    ],
+    "note": "steep north bank rock faces"
+  },
+  "mossy_rock": {
+    "id": "mossy_rock",
+    "kind": "texture",
+    "name": "Mossy Rock",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/mossy_rock",
+    "files": [
+      "textures/mossy_rock/mossy_rock_diffuse_2k.jpg",
+      "textures/mossy_rock/mossy_rock_nor_gl_2k.jpg",
+      "textures/mossy_rock/mossy_rock_arm_2k.jpg",
+      "textures/mossy_rock/mossy_rock_displacement_2k.jpg"
+    ],
+    "note": "mossy rock faces and boulders"
+  },
+  "rocky_trail": {
+    "id": "rocky_trail",
+    "kind": "texture",
+    "name": "Rocky Trail",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/rocky_trail",
+    "files": [
+      "textures/rocky_trail/rocky_trail_diffuse_1k.jpg",
+      "textures/rocky_trail/rocky_trail_nor_gl_1k.jpg",
+      "textures/rocky_trail/rocky_trail_arm_1k.jpg",
+      "textures/rocky_trail/rocky_trail_displacement_1k.jpg"
+    ],
+    "note": "path from the bank to the cabin"
+  },
+  "brown_mud_rocks_01": {
+    "id": "brown_mud_rocks_01",
+    "kind": "texture",
+    "name": "Brown Mud Rocks 01",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/brown_mud_rocks_01",
+    "files": [
+      "textures/brown_mud_rocks_01/brown_mud_rocks_01_diffuse_1k.jpg",
+      "textures/brown_mud_rocks_01/brown_mud_rocks_01_nor_gl_1k.jpg",
+      "textures/brown_mud_rocks_01/brown_mud_rocks_01_arm_1k.jpg",
+      "textures/brown_mud_rocks_01/brown_mud_rocks_01_displacement_1k.jpg"
+    ],
+    "note": "muddy gravel between bar and grass"
+  },
+  "forest_leaves_02": {
+    "id": "forest_leaves_02",
+    "kind": "texture",
+    "name": "Forest Leaves 02",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/forest_leaves_02",
+    "files": [
+      "textures/forest_leaves_02/forest_leaves_02_diffuse_1k.jpg",
+      "textures/forest_leaves_02/forest_leaves_02_nor_gl_1k.jpg",
+      "textures/forest_leaves_02/forest_leaves_02_arm_1k.jpg",
+      "textures/forest_leaves_02/forest_leaves_02_displacement_1k.jpg"
+    ],
+    "note": "mossy litter in shade"
+  }
+}

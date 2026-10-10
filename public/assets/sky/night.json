@@ -1,0 +1,53 @@
+{
+  "source": "qwantani_night_puresky_4k.hdr",
+  "sunDir": [
+    0.72372,
+    0.0,
+    0.6901
+  ],
+  "sunElevationDeg": 0.0,
+  "sunPhiDeg": 43.638,
+  "sunVisible": false,
+  "sunColor": [
+    0.7009,
+    0.9757,
+    1.0
+  ],
+  "sunIrradiance": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "horizonColor": [
+    1.6286,
+    2.1215,
+    2.1252
+  ],
+  "zenithColor": [
+    0.4787,
+    0.4393,
+    0.4459
+  ],
+  "skyIrradianceH": 2.0171,
+  "envClamp": 24.0,
+  "env": "sky/night_env.hdr",
+  "brightestPoint": {
+    "lum": 554.81,
+    "row": 451,
+    "col": 2285
+  },
+  "bg": {
+    "file": "sky/night_bg.hdr",
+    "width": 4096,
+    "height": 1152,
+    "vMin": 0.4375,
+    "elevationMinDeg": -11.25
+  },
+  "rotationYDeg": 115.0,
+  "sunBearingDeg": 18.64,
+  "sunDirWorld": [
+    0.31958,
+    0.0,
+    -0.94756
+  ]
+}

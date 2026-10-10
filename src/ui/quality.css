@@ -1,0 +1,143 @@
+/* Graphics quality: the loading screen's GPU line, the pause panel (Esc) and the device-loss notice. */
+.loading-gpu {
+  margin-top: 22px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(239, 230, 210, 0.42);
+}
+
+.loading-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(239, 230, 210, 0.6);
+}
+
+.loading-fatal {
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(239, 230, 210, 0.82);
+}
+
+.loading-fatal-title {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #efe6d2;
+}
+
+.device-lost {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 12vw;
+  text-align: center;
+  background: rgba(11, 13, 15, 0.86);
+  color: #efe6d2;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  z-index: 20;
+}
+
+.settings-menu {
+  position: fixed;
+  z-index: 6;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 340px;
+  max-width: min(520px, 90vw);
+  padding: 22px 26px 18px;
+  background: rgba(11, 13, 15, 0.72);
+  border: 1px solid rgba(239, 230, 210, 0.14);
+  backdrop-filter: blur(6px);
+  color: #e9e3d6;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-align: center;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.settings-menu[hidden] {
+  display: none;
+}
+
+.settings-title {
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(239, 230, 210, 0.85);
+  margin-bottom: 18px;
+}
+
+.settings-label {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(239, 230, 210, 0.55);
+  margin-bottom: 10px;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.settings-opt {
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 6px 12px;
+  color: rgba(239, 230, 210, 0.75);
+  background: transparent;
+  border: 1px solid rgba(239, 230, 210, 0.22);
+  cursor: pointer;
+}
+
+.settings-opt:hover,
+.settings-opt:focus-visible {
+  color: #efe6d2;
+  border-color: rgba(239, 230, 210, 0.5);
+  outline: none;
+}
+
+.settings-opt[aria-pressed='true'] {
+  color: #0b0d0f;
+  background: rgba(239, 230, 210, 0.85);
+  border-color: rgba(239, 230, 210, 0.85);
+}
+
+.settings-info {
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(239, 230, 210, 0.7);
+}
+
+.settings-note {
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: rgba(239, 230, 210, 0.45);
+}
+
+.settings-credits {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(239, 230, 210, 0.55);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(239, 230, 210, 0.25);
+}
+
+.settings-credits:hover {
+  color: rgba(239, 230, 210, 0.85);
+}

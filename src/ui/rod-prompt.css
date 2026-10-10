@@ -1,0 +1,41 @@
+/* The rod on the ground (RodGround): one fading line where the fishing prompts go, in their letterpress style. */
+.rod-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 7.5%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: rgba(239, 230, 210, 0.82);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 14px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.rod-prompt.on {
+  opacity: 0.85;
+}
+
+.rod-prompt.toast {
+  font-style: italic;
+}
+
+.rod-prompt kbd {
+  font-family: inherit;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  padding: 1px 6px 2px;
+  margin: 0 6px 0 0;
+  border: 1px solid rgba(239, 230, 210, 0.5);
+  border-radius: 3px;
+  background: rgba(24, 18, 10, 0.3);
+  vertical-align: 1px;
+}
+
+/* one line at a time: a rod message hides the fishing prompt under it */
+#hud:has(.rod-prompt.on) .fh-prompt {
+  opacity: 0;
+}

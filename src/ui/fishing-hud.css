@@ -1,0 +1,167 @@
+/* Fishing HUD: small, out of the way, letterpress cream on the scene (no boxes). Hidden in ?shot photo mode. */
+.fh-root {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #efe6d2;
+  --fh-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 14px rgba(0, 0, 0, 0.35);
+}
+
+.fh-root.fh-hidden {
+  display: none;
+}
+
+/* top left, small and faint: it shows for a few seconds after it changes and while Tab is held, then fades */
+.fh-tally {
+  position: absolute;
+  top: 22px;
+  left: 28px;
+  text-align: left;
+  text-shadow: var(--fh-shadow);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.fh-tally.fh-on {
+  opacity: 0.68;
+  transition: opacity 0.3s ease;
+}
+
+/* under the ?debug / ?audiodebug panels when they show */
+#hud:has(.debug-panel) .fh-tally {
+  top: 210px;
+}
+
+.fh-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+.fh-label {
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(239, 230, 210, 0.66);
+}
+
+.fh-value {
+  font-size: 12.5px;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+.fh-count {
+  font-size: 15px;
+  font-style: normal;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.fh-rule {
+  width: 140px;
+  height: 1px;
+  margin: 3px auto 3px 0;
+  background: linear-gradient(to right, rgba(239, 230, 210, 0.6), rgba(239, 230, 210, 0));
+}
+
+.fh-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 7.5%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-shadow: var(--fh-shadow);
+  opacity: 0;
+  transition: opacity 0.25s ease, color 0.2s linear;
+}
+
+.fh-prompt.fh-on {
+  opacity: 0.92;
+}
+
+.fh-prompt.fh-urgent {
+  color: #ffe2ad;
+  font-size: 17px;
+}
+
+.fh-prompt.fh-toast {
+  font-style: italic;
+  color: rgba(239, 230, 210, 0.85);
+}
+
+.fh-prompt kbd {
+  font-family: inherit;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  padding: 1px 6px 2px;
+  margin: 0 4px;
+  border: 1px solid rgba(239, 230, 210, 0.55);
+  border-radius: 3px;
+  background: rgba(24, 18, 10, 0.32);
+  vertical-align: 1px;
+}
+
+.fh-power {
+  position: absolute;
+  left: 50%;
+  bottom: calc(7.5% - 12px);
+  width: 128px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: rgba(239, 230, 210, 0.18);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.fh-power.fh-on {
+  opacity: 1;
+}
+
+.fh-power i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #efe6d2;
+}
+
+.fh-card {
+  position: absolute;
+  left: 50%;
+  bottom: 13%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-shadow: var(--fh-shadow);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.fh-card.fh-on {
+  opacity: 1;
+}
+
+.fh-species {
+  font-size: 27px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.fh-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(239, 230, 210, 0.78);
+}
+
+.fh-record {
+  margin-top: 7px;
+  font-size: 10.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #e6c78d;
+}

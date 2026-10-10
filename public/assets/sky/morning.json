@@ -1,0 +1,48 @@
+{
+  "source": "qwantani_morning_puresky_4k.hdr",
+  "sunDir": [
+    0.75857,
+    0.34479,
+    0.5529
+  ],
+  "sunElevationDeg": 20.17,
+  "sunPhiDeg": 36.087,
+  "sunVisible": true,
+  "sunColor": [
+    1.0,
+    0.8153,
+    0.5914
+  ],
+  "sunIrradiance": [
+    9.307,
+    7.588,
+    5.504
+  ],
+  "horizonColor": [
+    0.9228,
+    0.9443,
+    0.8953
+  ],
+  "zenithColor": [
+    0.1002,
+    0.1526,
+    0.255
+  ],
+  "skyIrradianceH": 1.1251,
+  "envClamp": 24.0,
+  "env": "sky/morning_env.hdr",
+  "bg": {
+    "file": "sky/morning_bg.hdr",
+    "width": 4096,
+    "height": 1152,
+    "vMin": 0.4375,
+    "elevationMinDeg": -11.25
+  },
+  "rotationYDeg": 76.0,
+  "sunBearingDeg": 50.09,
+  "sunDirWorld": [
+    0.71999,
+    0.34479,
+    -0.60228
+  ]
+}

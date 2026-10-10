@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0b0d0f;
+  color: #e9e3d6;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+#app,
+#app canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#loading {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #0b0d0f;
+  transition: opacity 0.8s ease;
+  z-index: 10;
+}
+
+#loading.done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-inner {
+  width: min(420px, 70vw);
+  text-align: center;
+}
+
+.loading-title {
+  font-size: 30px;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+  color: #efe6d2;
+}
+
+.loading-bar {
+  height: 2px;
+  background: rgba(239, 230, 210, 0.15);
+  overflow: hidden;
+}
+
+.loading-fill {
+  height: 100%;
+  width: 0%;
+  background: #efe6d2;
+  transition: width 0.2s linear;
+}
+
+.loading-text {
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(239, 230, 210, 0.6);
+}
+
+#hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#hud.hidden {
+  display: none;
+}
+
+.debug-panel {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font: 12px/1.4 ui-monospace, Consolas, monospace;
+  color: #d8ffd8;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 6px 8px;
+  white-space: pre;
+}

@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.vite-cache/
+.gauntlet/
+*.log
+*.mp4
+*.webm
+.env*
+.DS_Store
+# raw downloads, screenshots and reference photos never live in the repo
+/raw/
+/shots/
+/refs/
+# working notes and the critic's brief stay local
+DECISIONS.md
+tools/critic-prompt.md
+docs/water-research.md
+# the raw Poly Haven maps and the original sky plate (pnpm assets:polyhaven downloads them into raw/)
+/public/assets/textures/
+/public/assets/hdri/
